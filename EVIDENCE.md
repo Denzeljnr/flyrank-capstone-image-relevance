@@ -63,3 +63,16 @@ Reason: Subject mismatch: expected something related to "dog", detected "gray wo
 | Red fox post | fox-08.jpg | 0.755 | approved |
 | Wolf pack post | wolf-13.jpg | 0.674 | approved |
 | Dog domestication post | dog-03.jpg | 0.613 | approved |
+
+## "No confident match" — guard rejects when nothing scores well enough
+
+Test: seeded an unrelated post (home espresso brewing) with no connection
+to any image category. Highest similarity across all 45 images was 0.496
+(dog-13.jpg), below the 0.6 similarity threshold.
+
+Output:
+```
+{"post_title":"The Basics of Home Espresso Brewing","decision":"rejected",
+"reason":"No confident match found. Highest similarity score (0.50) is
+below the threshold (0.6).","candidate":null}
+```

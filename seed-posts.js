@@ -5,7 +5,8 @@ const { pool } = require('./db');
 const posts = [
   { title: 'Why Red Foxes Thrive in Winter', file: 'dataset/posts/fox-post.md' },
   { title: 'The Social Life of a Wolf Pack', file: 'dataset/posts/wolf-post.md' },
-  { title: 'What 20,000 Years of Domestication Did to the Dog', file: 'dataset/posts/dog-post.md' }
+  { title: 'What 20,000 Years of Domestication Did to the Dog', file: 'dataset/posts/dog-post.md' },
+  { title: 'The Basics of Home Espresso Brewing', file: 'dataset/posts/unrelated-post.md' }
 ];
 
 async function seedPosts() {
