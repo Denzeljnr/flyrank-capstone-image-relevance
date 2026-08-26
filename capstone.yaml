@@ -1,0 +1,8 @@
+run: node server.js
+seed: node run-batch.js && node seed-posts.js && node run-embeddings.js
+test: npx jest
+base_url: http://localhost:3000
+endpoints:
+  - GET /posts/:id/images
+  - POST /suggestions/:id/approve
+  - POST /suggestions/:id/reject
